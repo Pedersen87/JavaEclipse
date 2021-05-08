@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="lab4.controller.Rect" x="181" y="503">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="lab4.controller.Model"/>
+    </Class>
+    <Class name="lab4.controller.Circle" x="33" y="503">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="lab4.controller.Model"/>
+    </Class>
+    <Class name="lab4.controller.Model" x="132" y="269">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="lab4.controller.DrawInterface"/>
+        <Association
+            destinationClassName="lab4.controller.DrawInterface"
+            endpointName="drawInterfaceObjectOut" kind="Simple"/>
+    </Class>
+    <Class name="lab4.controller.View" x="754" y="249">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="lab4.controller.Controller"
+            endpointName="controller" kind="Simple"/>
+        <Association
+            destinationClassName="lab4.controller.DrawInterface"
+            endpointName="drawObject" kind="Simple"/>
+        <Communication destinationClassName="lab4.controller.DrawInterface"/>
+    </Class>
+    <Class name="lab4.controller.Line" x="331" y="505">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="lab4.controller.Model"/>
+    </Class>
+    <Class name="lab4.controller.DrawInterface" x="164" y="61">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="lab4.controller.Controller" x="501" y="297">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="lab4.controller.View"
+            endpointName="view" kind="Simple"/>
+        <Association destinationClassName="lab4.controller.Model"
+            endpointName="model" kind="Simple"/>
+        <Communication destinationClassName="lab4.controller.Model"/>
+        <Communication destinationClassName="lab4.controller.View"/>
+    </Class>
+    <Class name="lab4.controller.ShapeContainer" x="495" y="60">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="lab4.controller.DrawInterface"/>
+        <Communication destinationClassName="lab4.controller.DrawInterface"/>
+    </Class>
+</ClassDiagram>
